@@ -1,0 +1,41 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Katy Humble
+	email = KHumble@esri.com
+[core]
+	excludesfile = /Users/katy8381/.gitignore_global
+[difftool "sourcetree"]
+	cmd = 'C:/Program Files/Beyond Compare 4/BComp.exe' \"$LOCAL\" \"$REMOTE\"
+[mergetool "sourcetree"]
+	cmd = 'C:/Program Files/Beyond Compare 4/BComp.exe' \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+	trustExitCode = true
+[diff]
+  tool = bc3
+[merge]
+  tool = bc3
+  trustExitCode = true
+[alias]
+  ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cN]" --decorate
+  ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cN]" --decorate --numstat
+  f = "!git ls-files | grep -i"
+  grep = grep -Ii
+  gr = grep -Ii
+  lg = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+  names = shortlog -n -s
+  hide = update-index --assume-unchanged
+  unhide = update-index --no-assume-unchanged
+  hidden = !git ls-files -v | grep  \"^[[:lower:]]\"
+  ignored = !git status -s --ignored | grep \"^!!\"
+  count = "!f() { git rev-list --count HEAD ^$(git rev-parse --abbrev-ref --symbolic-full-name @{u});  }; f"
+[mergetool]
+	bcomp = trustExitCode
+[pull]
+  rebase = true
+[commit]
+	template = /Users/katy8381/.stCommitMsg
+[rerere]
+	enabled = true
+[branch]
+  autosetuprebase = always
+  autosetupmerge = always
