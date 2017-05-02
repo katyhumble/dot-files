@@ -32,8 +32,6 @@
 	bcomp = trustExitCode
 [pull]
   rebase = true
-[commit]
-	template = /Users/katy8381/.stCommitMsg
 [rerere]
 	enabled = true
 [branch]
