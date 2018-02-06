@@ -1,0 +1,37 @@
+	• git rebase origin/master
+	• git branch --set-upstream-to=origin/master
+	• git diff
+	• git add -I
+	• git commit -s
+	• git show
+	• git ls
+	• git rebase -i HEAD~<#>
+	• git push -f origin <branch>
+	• git commit --amend
+	• git branch <name>
+	• git checkout <name>
+	• git reset HEAD~
+	• git diff
+	• git checkout . (removes current changes)
+	• git checkout -b <name> origin/master
+	• git mergetool
+	• git rebase --continue 
+	• git branch -vv
+	• git branch -D <branch>
+	• git rebase origin/master
+	• git checkout -b <name> origin/<branch>
+	• git log -p -<#>
+	• git stash
+	• git stash pop
+	• git branch -vv
+	• git bisect start
+	• git bisect good <SHA>
+	• git bisect bad <SHA>
+	• git bisect good
+	• git bisect bad
+	• git bisect reset
+	• git clean -ndf (dry run of cleaning up untracked files)
+	• git clean -df (removes untracked files)
+	• git difftool -d <first branch> <second branch>
+	• git checkout <remote name>
+
